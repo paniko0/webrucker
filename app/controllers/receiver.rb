@@ -29,16 +29,12 @@ Webrucker.controllers :receiver do
   post :new, :with => :login do
     puts request.body.string
 
-    response = Response.new(:object => request.body.string)
-
     user = User.find_by_login(params[:login])
 
     if user.nil?
       user = User.new(:login => params[:login])
     end
     
-
-
     user.response.push(request.body.string)
     user.save!
   end
