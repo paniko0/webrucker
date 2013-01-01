@@ -27,7 +27,8 @@ Webrucker.controllers :receiver do
   end
 
   post :new, :with => :login do
-    puts request.body.string
+    logger.info("Read: #{request.body.read}")
+    logger.info("String: #{request.body.string}")
 
     user = User.find_by_login(params[:login])
 
