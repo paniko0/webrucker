@@ -23,7 +23,8 @@ Webrucker.controllers :receiver do
   end
 
   get :new, :with => :login do
-    "New Event mano: #{params[:login]}, #{User.find_by_login(params[:login]).response}"
+    @users = User.find_by_login(params[:login])
+    render 'receiver/list'
   end
 
   post :new, :with => :login do
