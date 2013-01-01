@@ -36,7 +36,7 @@ Webrucker.controllers :receiver do
       user = User.new(:login => params[:login])
     end
     
-    user.response.push(request.body.string)
+    user.response.push(request.body.read)
     user.save!
   end
 
