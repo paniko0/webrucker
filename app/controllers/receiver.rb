@@ -22,14 +22,12 @@ Webrucker.controllers :receiver do
     "Hello Webrucker"
   end
 
-  get :new, :with => :login do
+  get :index, :with => :login do
     @users = User.find_by_login(params[:login])
     render 'receiver/list'
   end
 
   post :new, :with => :login do
-    # logger.info("Read: #{request.body.read}")
-    # logger.info("String: #{request.body.string}")
 
     user = User.find_by_login(params[:login])
     json = JSON.parse(request.body.string)
