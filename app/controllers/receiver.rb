@@ -36,8 +36,7 @@ Webrucker.controllers :receiver do
       user = User.new(:login => params[:login])
     end
     
-    user.response.push(json.to_s)
+    user.response.push(:json => json.to_s, :datetime => Time.now.getlocal)
     user.save!
   end
-
 end

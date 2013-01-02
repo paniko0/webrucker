@@ -16,6 +16,7 @@
             <thead>
               <tr>
                 <th>User</th>
+                <th>Data Recebimento</th>
                 <th>Webhook</th>
               </tr>
             </thead>
@@ -23,7 +24,8 @@
               <% @users["response"].each do |response| %>
               <tr>
                 <td><%= @users["login"] %></td>
-                <td><%= response %></td>
+                <td><%= response["datetime"] %></td>
+                <td><%= response["json"] %></td>
               </tr>
               <% end %>
             </tbody>
