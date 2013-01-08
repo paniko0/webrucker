@@ -34,12 +34,12 @@ Webrucker.controllers :receiver do
   post :new, :with => :login do
 
     user = User.find_by_login(params[:login])
-    json = JSON.parse(request.body.string)
+    json = JSON.parse(request.body.string.force_encoding("BINARY"))
 
     if user.nil?
       user = User.new(:login => params[:login])
     end
-    logger.debug "================= #{request_headers.inspect}"
+
     user.response.push(:json => json.to_json, :datetime => Time.now.getlocal, :header => request_headers)
     user.save!
   end
