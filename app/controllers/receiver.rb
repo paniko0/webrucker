@@ -18,7 +18,7 @@ Webrucker.controllers :receiver do
     user = User.find_by_login(params[:login])
     json = JSON.parse(request.body.read)
 
-    json["resource"]["status"]["description"] = "" unless json["resource"]["status"]["description"].nil?
+    # json["resource"]["status"]["description"] = "" unless json["resource"]["status"]["description"].nil?
 
     if user.nil?
       user = User.new(:login => params[:login])
