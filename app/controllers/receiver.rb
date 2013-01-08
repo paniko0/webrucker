@@ -19,10 +19,6 @@ Webrucker.controllers :receiver do
     json = JSON.parse(request.body.read)
 
     json["resource"]["status"]["description"] = "" unless json["resource"]["status"]["description"].nil?
-      
-    end 
-      
-    end
 
     if user.nil?
       user = User.new(:login => params[:login])
