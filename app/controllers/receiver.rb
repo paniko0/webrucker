@@ -34,7 +34,8 @@ Webrucker.controllers :receiver do
   post :new, :with => :login do
 
     user = User.find_by_login(params[:login])
-    json = JSON.parse(request.body.string.force_encoding("BINARY"))
+    json = JSON.parse(request.body.string)
+    puts "============== #{json}"
 
     if user.nil?
       user = User.new(:login => params[:login])
