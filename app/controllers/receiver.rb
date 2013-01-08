@@ -23,7 +23,10 @@ Webrucker.controllers :receiver do
   end
 
   get :index, :with => :login do
+    # user = User.where(:login => params[:login]).sort(:datetime.desc)
+    # @users = user[0]
     @users = User.find_by_login(params[:login])
+
     render 'receiver/list'
   end
 
@@ -36,7 +39,7 @@ Webrucker.controllers :receiver do
       user = User.new(:login => params[:login])
     end
     
-    user.response.push(:json => json.to_s, :datetime => Time.now.getlocal)
+    user.response.push(:json => json.to_json, :datetime => Time.now.getlocal, :header => request_headers)
     user.save!
   end
 end
