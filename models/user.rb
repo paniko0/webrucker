@@ -1,4 +1,4 @@
-class User
+﻿class User
   include MongoMapper::Document
 
   key :login, String

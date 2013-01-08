@@ -1,4 +1,4 @@
-source :rubygems
+﻿source :rubygems
 
 # Server requirements
 # gem 'thin' # or mongrel

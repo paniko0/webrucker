@@ -1,4 +1,4 @@
-# MongoMapper.connection = Mongo::Connection.new('localhost', nil, :logger => logger)
+﻿# MongoMapper.connection = Mongo::Connection.new('localhost', nil, :logger => logger)
 
 # case Padrino.env
 #   when :development then MongoMapper.database = 'webrucker_development'
