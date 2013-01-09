@@ -2,7 +2,10 @@
 production:
   sessions:
     default:
-      uri: URI.parse(ENV['MONGOHQ_URL'])
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      options:
+        skip_version_check: true
+        safe: true
 development:
   sessions:
     default:
