@@ -34,6 +34,7 @@ Padrino::Logger::Config[:development][:log_static] = true
 # Add your before (RE)load hooks here
 #
 Padrino.before_load do
+	Mongoid.load!("./config/mongoid.yml")
 end
 
 ##
