@@ -20,7 +20,6 @@
                 <th>User</th>
                 <th>Data Recebimento</th>
                 <th>Webhook</th>
-                <th>Authorization</th>
               </tr>
             </thead>
             <tbody>
@@ -29,7 +28,7 @@
                 <td><%= @users.login %></td>
                 <td><%= response["datetime"] %></td>
                 <td><%= response["json"] %></td>
-                <td><code><%= response["header"]["authorization"].nil? ? "NoAuth" : response["header"]["authorization"] %></code></td>
+                
               </tr>
               <% end %>
             </tbody>
