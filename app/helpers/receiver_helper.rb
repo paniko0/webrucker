@@ -1,4 +1,5 @@
-﻿# Helper methods defined here can be accessed in any controller or view in the application
+﻿# -*- coding: utf-8 -*-
+# Helper methods defined here can be accessed in any controller or view in the application
 
 Webrucker.helpers do
   # def simple_helper_method
