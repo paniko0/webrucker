@@ -2,10 +2,10 @@
   include Mongoid::Document
 
   field :login, type: String
-  field :datetime, type: DateTime
+  field :received_date, type: DateTime
   field :response, type: Array
 
   # many :responses
 
-  attr_accessible :login, :datetime, :response
+  attr_accessible :login, :received_date, :response
 end

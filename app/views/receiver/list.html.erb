@@ -24,10 +24,10 @@
               </tr>
             </thead>
             <tbody>
-              <% @users.response.each do |response| %>
+              <% @users.response.reverse.each do |response| %>
               <tr>
                 <td><%= @users.login %></td>
-                <td><%= response["datetime"] %></td>
+                <td><%= response["received_date"] %></td>
                 <td><%= response["json"] %></td>
                 <td><code><%= response["header"]["authorization"].nil? ? "NoAuth" : response["header"]["authorization"] %></code></td>
               </tr>
