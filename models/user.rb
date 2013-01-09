@@ -1,9 +1,9 @@
 ﻿class User
-  include MongoMapper::Document
+  include Mongoid::Document
 
-  key :login, String
-  key :datetime, String
-  key :response, Array
+  field :login, type: String
+  field :datetime, type: DateTime
+  field :response, type: Array
 
   # many :responses
 

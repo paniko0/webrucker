@@ -6,25 +6,15 @@ Webrucker.controllers :receiver do
   end
 
   get :index, :with => :login do
-    # user = User.where(:login => params[:login]).sort(:datetime.desc)
-    # @users = user[0]
-    @users = User.find_by_login(params[:login])
-    # @users = User.all(:login => params[:login])
-
+    @users = User.find_by(login: params[:login])
+    logger.info @users.response[0]
+    @authorization_header = @users["header"].nil? ? "NoAuth" : @users["header"]["authorization"]
     render 'receiver/list'
   end
 
   post :new, :with => :login do
-    user = User.find_by_login(params[:login])
-    # json = JSON.parse(request.body.read)
-
-    # json["resource"]["status"]["description"] = "" unless json["resource"]["status"]["description"].nil?
-
-    if user.nil?
-      user = User.new(:login => params[:login])
-    end
-
-    user.response.push(:json => request.body.read, :datetime => Time.now, :header => request_headers)
+    user = User.find_or_initialize_by(login: params[:login])
+    user.push(:response, :json => request.body.read, :datetime => Time.now, :header => request_headers)
     user.save!
   end
 

@@ -9,13 +9,9 @@ development:
       hosts:
         - 127.0.0.1:27017
       database: webrucker_development
-      username: user
-      password: password
 test:
   sessions:
     default:
       hosts:
         - 127.0.0.1:27017
       database: webrucker_test
-      username: user
-      password: password
