@@ -1,4 +1,4 @@
-﻿# encoding: UTF-8
+﻿# -*- coding: utf-8 -*-
 Webrucker.controllers :receiver do
 
   get :index do
