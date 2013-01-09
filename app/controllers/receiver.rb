@@ -16,7 +16,7 @@ Webrucker.controllers :receiver do
 
   post :new, :with => :login do
     user = User.find_by_login(params[:login])
-    json = JSON.parse(request.body.read)
+    # json = JSON.parse(request.body.read)
 
     # json["resource"]["status"]["description"] = "" unless json["resource"]["status"]["description"].nil?
 
@@ -24,7 +24,7 @@ Webrucker.controllers :receiver do
       user = User.new(:login => params[:login])
     end
 
-    user.response.push(:json => json.to_json, :datetime => Time.now.getlocal, :header => request_headers)
+    user.response.push(:json => request.body.read, :datetime => Time.now, :header => request_headers)
     user.save!
   end
 

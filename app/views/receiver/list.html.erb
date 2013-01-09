@@ -29,7 +29,7 @@
                 <td><%= @users["login"] %></td>
                 <td><%= response["datetime"] %></td>
                 <td><%= response["json"] %></td>
-                
+                <td><code>1<% # response["header"]["authorization"] unless response["header"].nil? %></code></td>
               </tr>
               <% end %>
             </tbody>
