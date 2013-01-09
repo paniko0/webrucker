@@ -1,5 +1,7 @@
 ﻿source :rubygems
 
+ruby '1.9.3'
+
 # Server requirements
 # gem 'thin' # or mongrel
 # gem 'trinidad', :platform => 'jruby'
