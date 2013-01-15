@@ -1,12 +1,27 @@
 ﻿# -*- coding: utf-8 -*-
 Webrucker.controllers :receiver do
 
-  get :index do
-    "Hello Webrucker"
+  enable :sessions
+
+  helpers do
+
+    def protected! user
+      unless authorized? user
+        response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
+        throw(:halt, [401, "Not authorized\n"])
+      end
+    end
+
+    def authorized? user
+      @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+      @auth.provided? && @auth.basic? && ("'#{@auth.credentials[0]}'" == "'#{user.login.to_s}'" && "'#{@auth.credentials[1]}'" == "'#{user.response.first["header"]["authorization"]}'")
+    end
+
   end
 
   get :index, :with => :login do
     @users = User.find_by(login: params[:login])
+    protected! @users
     render 'receiver/list'
   end
 
