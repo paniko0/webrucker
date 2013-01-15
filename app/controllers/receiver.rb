@@ -26,7 +26,7 @@ Webrucker.controllers :receiver do
   end
 
   post :new, :with => :login do
-    puts "==============================> #{request.body.read.force_encoding('UTF-8')}" 
+    Logger.info "==============================> #{request.body.read.force_encoding('UTF-8')}" 
     user = User.find_or_initialize_by(login: params[:login])
     user.push(:response, :json => request.body.read.force_encoding('UTF-8'), :received_date => Time.now, :header => request_headers)
     user.save!
