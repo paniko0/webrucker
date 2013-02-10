@@ -7,6 +7,10 @@ Webrucker.controllers :receiver do
     "Vai Corinthians"
   end
 
+  head :index, :with => :login do
+    "Vai Corinthians"
+  end
+
   get :index, :with => :login do
     @users = User.find_by(login: params[:login])
     if @users
