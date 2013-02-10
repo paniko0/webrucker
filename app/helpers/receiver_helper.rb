@@ -9,4 +9,15 @@ Webrucker.helpers do
     env.inject({}){|acc, (k,v)| acc[$1.downcase] = v if k =~ /^http_(.*)/i; acc}
   end
 
+  def protected! user
+    unless authorized? user
+      response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
+      throw(:halt, [401, "Not authorized\n"])
+    end
+  end
+
+  def authorized? user
+    @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+    @auth.provided? && @auth.basic? && ("'#{@auth.credentials[0]}'" == "'#{user.login.to_s}'" && "'#{@auth.credentials[1]}'" == "'#{user.response.first["header"]["authorization"]}'")
+  end
 end

@@ -1,0 +1,36 @@
+# Logfile created on 2013-02-09 20:51:16 -0200 by logger.rb/31641
+[02/09/13 20:51:16 -0200 MacBook.local (13385)] INFO : Environment: development
+[02/09/13 20:51:16 -0200 MacBook.local (13385)] INFO : Dispatcher: sinatra
+[02/09/13 20:51:16 -0200 MacBook.local (13385)] INFO : Application: Webrucker
+[02/09/13 20:51:16 -0200 MacBook.local (13385)] WARN : Agent configured not to send data in this environment.
+[02/09/13 20:51:16 -0200 MacBook.local (13385)] INFO : Installing Net instrumentation
+[02/09/13 20:51:16 -0200 MacBook.local (13385)] INFO : Installing Sinatra instrumentation
+[02/09/13 20:51:16 -0200 MacBook.local (13385)] INFO : Finished instrumentation
+[02/09/13 21:02:44 -0200 MacBook.local (13549)] INFO : Environment: development
+[02/09/13 21:02:44 -0200 MacBook.local (13549)] INFO : Dispatcher: sinatra
+[02/09/13 21:02:44 -0200 MacBook.local (13549)] INFO : Application: Webrucker
+[02/09/13 21:02:44 -0200 MacBook.local (13549)] WARN : Agent configured not to send data in this environment.
+[02/09/13 21:02:44 -0200 MacBook.local (13549)] INFO : Installing Net instrumentation
+[02/09/13 21:02:44 -0200 MacBook.local (13549)] INFO : Installing Sinatra instrumentation
+[02/09/13 21:02:44 -0200 MacBook.local (13549)] INFO : Finished instrumentation
+[02/09/13 21:06:48 -0200 MacBook.local (13599)] INFO : Environment: development
+[02/09/13 21:06:48 -0200 MacBook.local (13599)] INFO : Dispatcher: sinatra
+[02/09/13 21:06:48 -0200 MacBook.local (13599)] INFO : Application: Webrucker
+[02/09/13 21:06:48 -0200 MacBook.local (13599)] WARN : Agent configured not to send data in this environment.
+[02/09/13 21:06:48 -0200 MacBook.local (13599)] INFO : Installing Net instrumentation
+[02/09/13 21:06:48 -0200 MacBook.local (13599)] INFO : Installing Sinatra instrumentation
+[02/09/13 21:06:48 -0200 MacBook.local (13599)] INFO : Finished instrumentation
+[02/09/13 21:08:18 -0200 MacBook.local (13617)] INFO : Environment: development
+[02/09/13 21:08:18 -0200 MacBook.local (13617)] INFO : Dispatcher: sinatra
+[02/09/13 21:08:18 -0200 MacBook.local (13617)] INFO : Application: Webrucker
+[02/09/13 21:08:18 -0200 MacBook.local (13617)] WARN : Agent configured not to send data in this environment.
+[02/09/13 21:08:18 -0200 MacBook.local (13617)] INFO : Installing Net instrumentation
+[02/09/13 21:08:18 -0200 MacBook.local (13617)] INFO : Installing Sinatra instrumentation
+[02/09/13 21:08:18 -0200 MacBook.local (13617)] INFO : Finished instrumentation
+[02/09/13 21:11:05 -0200 MacBook.local (13654)] INFO : Environment: development
+[02/09/13 21:11:05 -0200 MacBook.local (13654)] INFO : Dispatcher: sinatra
+[02/09/13 21:11:05 -0200 MacBook.local (13654)] INFO : Application: Webrucker
+[02/09/13 21:11:05 -0200 MacBook.local (13654)] WARN : Agent configured not to send data in this environment.
+[02/09/13 21:11:05 -0200 MacBook.local (13654)] INFO : Installing Net instrumentation
+[02/09/13 21:11:05 -0200 MacBook.local (13654)] INFO : Installing Sinatra instrumentation
+[02/09/13 21:11:05 -0200 MacBook.local (13654)] INFO : Finished instrumentation

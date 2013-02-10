@@ -35,6 +35,7 @@ Padrino::Logger::Config[:development][:log_static] = true
 #
 Padrino.before_load do
 	Mongoid.load!("./config/mongoid.yml")
+  Mongoid.raise_not_found_error = false
 end
 
 ##
