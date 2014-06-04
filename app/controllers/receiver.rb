@@ -3,10 +3,6 @@ Webrucker.controllers :receiver do
 
   enable :sessions
 
-  get :index do
-    "Vai Corinthians"
-  end
-
   head :index, :with => :login do
     "Vai Corinthians"
   end
