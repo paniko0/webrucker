@@ -1,6 +1,6 @@
 ﻿source :rubygems
 
-ruby '1.9.3'
+ruby '2.1.2'
 
 # Server requirements
 # gem 'thin' # or mongrel
